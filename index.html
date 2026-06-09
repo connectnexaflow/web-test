@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vardhman Homeopathy — Dr. Abhishek Jain | Lucknow</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   VARDHMAN HOMEOPATHY — Modern CSS
+   Palette: Forest Green · Sage · Warm Cream · Antique Gold
+   Typefaces: Cormorant Garant (display) · DM Sans (body)
+   ============================================================ */
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --green-deep:#1A3D2E;
+  --green-mid:#2E5C42;
+  --green-sage:#4A7C59;
+  --green-light:#7BAF8A;
+  --green-mist:#C8DDD0;
+  --green-haze:#EEF5F1;
+  --gold:#C5A55A;
+  --gold-light:#E8D5A3;
+  --gold-pale:#FAF4E5;
+  --cream:#FAF7F2;
+  --cream-warm:#F2EDE5;
+  --white:#FFFFFF;
+  --charcoal:#1E1E1C;
+  --text-dark:#2C2C2A;
+  --text-mid:#5A5A55;
+  --text-light:#8A8A82;
+  --border:rgba(26,61,46,0.12);
+  --border-gold:rgba(197,165,90,0.30);
+  --font-display:'Cormorant Garant',Georgia,serif;
+  --font-body:'DM Sans',system-ui,sans-serif;
+  --radius-sm:6px;
+  --radius-md:12px;
+  --radius-lg:20px;
+  --radius-xl:32px;
+  --shadow-sm:0 2px 8px rgba(26,61,46,0.08);
+  --shadow-md:0 6px 24px rgba(26,61,46,0.10);
+  --shadow-lg:0 16px 48px rgba(26,61,46,0.14);
+  --section-pad:96px 0;
+  --transition:0.28s cubic-bezier(0.4,0,0.2,1);
+}
+
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);font-size:16px;line-height:1.7;color:var(--text-dark);background:var(--white);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+.section-eyebrow{display:inline-block;font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);background:var(--gold-pale);border:1px solid var(--border-gold);padding:5px 14px;border-radius:100px;margin-bottom:18px}
+
+.section-title{font-family:var(--font-display);font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1.18;color:var(--green-deep);letter-spacing:-0.01em}
+
+/* Topbar */
+.topbar{background:var(--green-deep);padding:9px 0;font-size:13px}
+.topbar-tagline{color:var(--green-mist);font-weight:300;letter-spacing:0.04em}
+.topbar-tagline::before{content:'✦';margin-right:8px;color:var(--gold);font-size:10px}
+.topbar-phone{color:var(--gold-light);font-weight:500;transition:color var(--transition)}
+.topbar-phone:hover{color:var(--white)}
+.topbar-phone i{color:var(--gold)}
+
+/* Navbar */
+#mainNav{background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:14px 0;transition:box-shadow var(--transition)}
+#mainNav.scrolled{box-shadow:var(--shadow-md)}
+.navbar-brand-text{font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--green-deep);line-height:1.1}
+.navbar-brand-text small{display:block;font-size:13px;font-weight:400;color:var(--green-sage);letter-spacing:0.06em}
+.nav-link{font-size:14px;font-weight:500;color:var(--text-dark)!important;padding:8px 14px!important;border-radius:var(--radius-sm);transition:color var(--transition),background var(--transition);letter-spacing:0.01em}
+.nav-link:hover,.nav-link.active{color:var(--green-mid)!important;background:var(--green-haze)}
+.dropdown-menu{border:1px solid var(--border);border-radius:var(--radius-md);box-shadow:var(--shadow-lg);padding:8px;margin-top:8px}
+.dropdown-item{font-size:14px;color:var(--text-dark);padding:9px 14px;border-radius:var(--radius-sm);transition:background var(--transition),color var(--transition)}
+.dropdown-item:hover{background:var(--green-haze);color:var(--green-deep)}
+.nav-appt-btn{font-size:14px!important;padding:9px 22px!important}
+
+/* Buttons */
+.btn{font-family:var(--font-body);font-weight:500;font-size:14px;letter-spacing:0.02em;border-radius:var(--radius-sm);padding:11px 26px;transition:all var(--transition);border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.btn-primary{background:var(--green-deep);color:var(--white);box-shadow:0 4px 14px rgba(26,61,46,0.25)}
+.btn-primary:hover{background:var(--green-mid);color:var(--white);transform:translateY(-1px);box-shadow:0 6px 20px rgba(26,61,46,0.30)}
+.btn-outline-light{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.50)}
+.btn-outline-light:hover{background:rgba(255,255,255,0.12);color:var(--white);border-color:rgba(255,255,255,0.75)}
+.btn-light{background:var(--white);color:var(--green-deep);box-shadow:var(--shadow-sm)}
+.btn-light:hover{background:var(--cream);color:var(--green-deep);transform:translateY(-1px)}
+.btn-lg{padding:13px 34px;font-size:15px}
+
+/* Hero */
+.hero-slide{min-height:620px;align-items:center;position:relative;overflow:hidden}
+.carousel-item.hero-slide.active{display:flex;}
+.hero-slide::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M30 0c2 8-4 16-8 22 4-2 10-4 14-2-4 4-10 6-14 8 6 0 12 2 16 6-6 0-12 2-14 8 4-4 10-6 14-4-6 4-8 12-6 18-4-6-10-10-16-10 2 6 0 12-4 16-2-6-8-10-14-10 4 4 6 10 4 16-4-4-10-6-16-4 6-6 6-14 2-20-2 6-8 10-14 10 4-4 4-12 0-16 4 2 8 6 10 10-2-6 0-14 6-18-2 6 0 12 4 16-2-6-2-14 2-20 2 6 8 10 14 8-4-4-4-12 0-16 0 6 4 12 10 14-4-4-6-10-4-16 4 6 10 8 16 6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none;z-index:1}
+.slide-1{background:linear-gradient(135deg,var(--green-deep) 0%,var(--green-mid) 55%,var(--green-sage) 100%)}
+.slide-2{background:linear-gradient(135deg,#0F2920 0%,var(--green-deep) 50%,var(--green-mid) 100%)}
+.slide-3{background:linear-gradient(135deg,var(--green-mid) 0%,#1E4A38 55%,var(--green-sage) 100%)}
+.hero-content{position:relative;z-index:2;padding:80px 0}
+.hero-badge{display:inline-block;background:rgba(197,165,90,0.18);color:var(--gold-light);border:1px solid rgba(197,165,90,0.35);font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:24px}
+.hero-content h1{font-family:var(--font-display);font-size:clamp(36px,5vw,58px);font-weight:700;color:var(--white);line-height:1.12;margin-bottom:22px;letter-spacing:-0.015em}
+.hero-content p{font-size:16px;color:rgba(255,255,255,0.72);line-height:1.7;max-width:500px;margin-bottom:36px;font-weight:300}
+
+.carousel-indicators [data-bs-target]{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.40);border:none;transition:all var(--transition)}
+.carousel-indicators .active{background:var(--gold);width:24px;border-radius:100px}
+.carousel-control-prev,.carousel-control-next{width:48px;height:48px;background:rgba(255,255,255,0.12);border-radius:50%;top:50%;transform:translateY(-50%);bottom:auto;margin:0 20px;border:1px solid rgba(255,255,255,0.20);transition:background var(--transition)}
+.carousel-control-prev:hover,.carousel-control-next:hover{background:rgba(255,255,255,0.22)}
+.carousel-control-prev-icon,.carousel-control-next-icon{width:18px;height:18px}
+
+/* Hours Strip */
+.hours-strip{background:var(--gold-pale);border-top:1px solid var(--border-gold);border-bottom:1px solid var(--border-gold);padding:18px 0}
+.hours-item{font-size:14px;color:var(--text-dark);padding:10px 20px;border-right:1px solid var(--border-gold);font-weight:400}
+.hours-item:last-child{border-right:none}
+.hours-item i{color:var(--gold)}
+.hours-item strong{font-weight:600;color:var(--green-deep)}
+.hours-item a{color:var(--green-mid);font-weight:500}
+.hours-item a:hover{color:var(--green-deep)}
+
+/* Section padding */
+.section-padding{padding:var(--section-pad)}
+
+/* About */
+.about-section{background:var(--white)}
+.about-text-content p{color:var(--text-mid);font-size:15px;margin-bottom:16px;line-height:1.8}
+.about-image-block{position:relative;border-radius:var(--radius-xl);overflow:visible}
+.about-image-block img{border-radius:var(--radius-xl);box-shadow:var(--shadow-lg);width:100%;object-fit:cover;aspect-ratio:4/5;background:var(--green-haze)}
+.about-image-block::before{content:'';position:absolute;top:-16px;right:-16px;width:60%;height:60%;border:2px solid var(--green-mist);border-radius:var(--radius-xl);z-index:-1}
+.about-info-card{position:absolute;bottom:32px;left:-32px;background:var(--white);border-radius:var(--radius-md);box-shadow:var(--shadow-lg);padding:18px 22px;display:flex;align-items:center;gap:14px;border:1px solid var(--border);min-width:230px}
+.info-card-icon{width:44px;height:44px;background:var(--green-haze);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green-mid);font-size:18px;flex-shrink:0}
+.info-card-label{font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);margin-bottom:3px}
+.info-card-phone{font-size:16px;font-weight:600;color:var(--green-deep);font-family:var(--font-display)}
+
+/* Treatments */
+.treatments-section{background:var(--cream);position:relative}
+.treatments-section::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--green-mist),transparent)}
+.treatment-card{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px 24px;height:100%;transition:all var(--transition);text-decoration:none;color:inherit;position:relative;overflow:hidden}
+.treatment-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green-sage),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform var(--transition)}
+.treatment-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--green-mist);color:inherit;text-decoration:none}
+.treatment-card:hover::before{transform:scaleX(1)}
+.treatment-icon{width:52px;height:52px;background:var(--green-haze);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--green-sage);margin-bottom:18px;transition:background var(--transition),color var(--transition)}
+.treatment-card:hover .treatment-icon{background:var(--green-deep);color:var(--white)}
+.treatment-card h4{font-family:var(--font-display);font-size:19px;font-weight:600;color:var(--green-deep);margin-bottom:10px;line-height:1.25}
+.treatment-card p{font-size:13.5px;color:var(--text-mid);line-height:1.65;flex:1;margin-bottom:18px}
+.treatment-link{font-size:13px;font-weight:600;color:var(--green-sage);display:inline-flex;align-items:center;gap:6px;letter-spacing:0.02em;transition:gap var(--transition),color var(--transition)}
+.treatment-card:hover .treatment-link{color:var(--green-deep);gap:10px}
+
+/* Testimonials */
+.testimonials-section{background:var(--green-deep);position:relative;overflow:hidden}
+.testimonials-section::before{content:'"';position:absolute;top:-40px;left:5%;font-family:var(--font-display);font-size:300px;color:rgba(255,255,255,0.04);line-height:1;pointer-events:none;user-select:none}
+.testimonials-section .section-eyebrow{background:rgba(197,165,90,0.15);color:var(--gold-light);border-color:rgba(197,165,90,0.25)}
+.testimonials-section .section-title{color:var(--white)}
+.testimonial-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.10);border-radius:var(--radius-xl);padding:44px 48px;text-align:center;backdrop-filter:blur(8px)}
+.testimonial-stars{color:var(--gold);font-size:20px;letter-spacing:3px;margin-bottom:24px}
+.testimonial-card p{font-family:var(--font-display);font-size:20px;font-style:italic;color:rgba(255,255,255,0.88);line-height:1.65;margin-bottom:32px}
+.testimonial-author{display:flex;align-items:center;justify-content:center;gap:14px}
+.author-avatar{width:46px;height:46px;background:var(--green-sage);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:16px;color:var(--white);flex-shrink:0}
+.testimonial-author strong{display:block;font-size:15px;font-weight:600;color:var(--white);text-align:left}
+.testimonial-author span{font-size:13px;color:rgba(255,255,255,0.50);text-align:left;display:block}
+.testimonial-btn{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.20);color:var(--white);font-size:14px;display:inline-flex;align-items:center;justify-content:center;transition:background var(--transition);padding:0}
+.testimonial-btn:hover{background:rgba(255,255,255,0.20);color:var(--white)}
+
+/* CTA */
+.cta-section{background:var(--gold-pale);border-top:1px solid var(--border-gold);border-bottom:1px solid var(--border-gold);padding:72px 0}
+.cta-section h2{font-family:var(--font-display);font-size:clamp(28px,3.5vw,40px);font-weight:600;color:var(--green-deep);margin-bottom:10px;line-height:1.2}
+.cta-section p{font-size:16px;color:var(--text-mid)}
+.cta-section .btn-outline-light{color:var(--green-deep);border-color:rgba(26,61,46,0.30)}
+.cta-section .btn-outline-light:hover{background:rgba(26,61,46,0.06);color:var(--green-deep)}
+
+/* Footer */
+.site-footer{background:var(--charcoal);padding:72px 0 0;color:rgba(255,255,255,0.60)}
+.footer-heading{font-family:var(--font-display);font-size:18px;font-weight:600;color:var(--white);margin-bottom:20px;letter-spacing:-0.01em}
+.site-footer p{font-size:14px;line-height:1.75;color:rgba(255,255,255,0.50)}
+.footer-links{list-style:none;padding:0}
+.footer-links li{margin-bottom:10px}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.55);transition:color var(--transition);display:inline-flex;align-items:center;gap:6px}
+.footer-links a::before{content:'→';font-size:12px;color:var(--green-light)}
+.footer-links a:hover{color:var(--white)}
+.footer-contact{list-style:none;padding:0}
+.footer-contact li{display:flex;gap:12px;font-size:14px;color:rgba(255,255,255,0.55);margin-bottom:14px;line-height:1.6}
+.footer-contact i{color:var(--gold);font-size:15px;margin-top:3px;flex-shrink:0}
+.footer-contact a{color:rgba(255,255,255,0.70);transition:color var(--transition)}
+.footer-contact a:hover{color:var(--gold-light)}
+.footer-bottom{background:rgba(0,0,0,0.25);margin-top:48px;padding:18px 0;border-top:1px solid rgba(255,255,255,0.08)}
+.footer-bottom p{font-size:13px;color:rgba(255,255,255,0.35);margin:0}
+.footer-bottom a{color:var(--gold-light);transition:color var(--transition)}
+.footer-bottom a:hover{color:var(--gold)}
+.navbar-toggler{border:1px solid var(--border);border-radius:var(--radius-sm);padding:6px 10px}
+.navbar-toggler:focus{box-shadow:none}
+
+@media(max-width:991px){
+  :root{--section-pad:72px 0}
+  .about-info-card{left:0;bottom:-20px}
+  .about-image-block::before{display:none}
+  .hero-content{padding:60px 0}
+  .testimonial-card{padding:32px 28px}
+}
+@media(max-width:767px){
+  :root{--section-pad:56px 0}
+  .hero-slide{min-height:520px}
+  .hours-item{border-right:none;border-bottom:1px solid var(--border-gold)}
+  .hours-item:last-child{border-bottom:none}
+  .about-info-card{position:static;margin-top:20px}
+  .testimonial-card p{font-size:17px}
+}
+@media(prefers-reduced-motion:no-preference){
+  .treatment-card,.about-text-content,.about-image-block{opacity:0;transform:translateY(20px);animation:fadeUp 0.6s ease forwards}
+  .treatment-card:nth-child(2){animation-delay:0.08s}
+  .treatment-card:nth-child(3){animation-delay:0.16s}
+  .treatment-card:nth-child(4){animation-delay:0.24s}
+  .about-image-block{animation-delay:0.15s}
+}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 col-md-6 d-none d-md-block">
+        <span class="topbar-tagline">Natural Healing, Lasting Wellness</span>
+      </div>
+      <div class="col-lg-6 col-md-6 text-md-end text-center">
+        <a href="tel:05224066650" class="topbar-phone"><i class="fas fa-phone-alt me-2"></i>0522 406 6650</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <span class="navbar-brand-text">Vardhman<small>Homeopathy</small></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Treatments</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Women's Health</a></li>
+            <li><a class="dropdown-item" href="#">Thyroid</a></li>
+            <li><a class="dropdown-item" href="#">Sinusitis</a></li>
+            <li><a class="dropdown-item" href="#">Skin</a></li>
+            <li><a class="dropdown-item" href="#">Hair Loss</a></li>
+            <li><a class="dropdown-item" href="#">Migraine</a></li>
+            <li><a class="dropdown-item" href="#">Allergy</a></li>
+            <li><a class="dropdown-item" href="#">Back Pain</a></li>
+            <li><a class="dropdown-item" href="#">Children Diseases</a></li>
+            <li><a class="dropdown-item" href="#">Height Increase</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        <li class="nav-item ms-lg-3">
+          <a href="#" class="btn btn-primary nav-appt-btn">Book Appointment</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Slider -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active hero-slide slide-1">
+      <div class="container h-100">
+        <div class="row align-items-center h-100">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <span class="hero-badge">Trusted Homeopathy Care</span>
+              <h1>Everybody's Health Improves Every Day</h1>
+              <p>We provide all kinds of homeopathic services to our patients according to their needs, starting from special conditions to everyday wellness.</p>
+              <a href="#" class="btn btn-primary me-3">Book Appointment</a>
+              <a href="#" class="btn btn-outline-light">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item hero-slide slide-2">
+      <div class="container h-100">
+        <div class="row align-items-center h-100">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <span class="hero-badge">Natural &amp; Safe Treatment</span>
+              <h1>We Are By Your Side in Every Step of Healing</h1>
+              <p>Homeopathic medicine is a natural remedy to cure the disease from the roots without any side effects.</p>
+              <a href="#" class="btn btn-primary me-3">Schedule Now</a>
+              <a href="#" class="btn btn-outline-light">About Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item hero-slide slide-3">
+      <div class="container h-100">
+        <div class="row align-items-center h-100">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <span class="hero-badge">Expert Homeopath in Lucknow</span>
+              <h1>The Doctor Ensures Our Health</h1>
+              <p>Dr. Abhishek Jain has done extensive research in homeopathy and developed a unique system of homeopathic medicine for individual patients.</p>
+              <a href="#" class="btn btn-primary me-3">Get Consultation</a>
+              <a href="#" class="btn btn-outline-light">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- Hours Strip -->
+<div class="hours-strip">
+  <div class="container">
+    <div class="row text-center justify-content-center g-0">
+      <div class="col-lg-3 col-md-6 hours-item">
+        <i class="fas fa-clock me-2"></i><strong>Mon – Sat:</strong> 11 AM – 2 PM &amp; 5:30 – 8:30 PM
+      </div>
+      <div class="col-lg-3 col-md-6 hours-item">
+        <i class="fas fa-calendar-day me-2"></i><strong>Sunday:</strong> 11 AM – 2 PM
+      </div>
+      <div class="col-lg-3 col-md-6 hours-item">
+        <i class="fas fa-phone-alt me-2"></i><a href="tel:05224066650">0522 406 6650</a>
+      </div>
+      <div class="col-lg-3 col-md-6 hours-item">
+        <i class="fas fa-map-marker-alt me-2"></i>Kapoorthala, Lucknow
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- About Section -->
+<section class="about-section section-padding">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="about-text-content">
+          <span class="section-eyebrow">About Us</span>
+          <h2 class="section-title" style="margin-bottom:24px">We Provide the Highest Level of Homeopathic Care</h2>
+          <p>Dr. Abhishek Jain has done extensive research in the field of homeopathy and developed a unique system of homeopathic medicine for individual patients. These medicines have the power to cure the diseases caused to the patients.</p>
+          <p>We offer the best homeopathy care for patients in Lucknow. We believe that each patient we have the privilege to care for should be treated with the same compassion as our own loved ones.</p>
+          <p>Homeopathic treatment is one of the most natural remedies and is perfect for people looking for safe alternative medicine — curing disease from the roots without any side effects.</p>
+          <a href="#" class="btn btn-primary mt-3">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="about-image-block">
+          <!-- Placeholder image using SVG since real image won't load -->
+          <svg viewBox="0 0 480 600" xmlns="http://www.w3.org/2000/svg" style="border-radius:32px;box-shadow:0 16px 48px rgba(26,61,46,0.14);width:100%;display:block;background:#EEF5F1">
+            <rect width="480" height="600" fill="#EEF5F1"/>
+            <circle cx="240" cy="200" r="80" fill="#C8DDD0"/>
+            <ellipse cx="240" cy="450" rx="130" ry="110" fill="#C8DDD0"/>
+            <text x="240" y="320" text-anchor="middle" font-family="Georgia,serif" font-size="18" fill="#4A7C59" font-style="italic">Dr. Abhishek Jain</text>
+            <text x="240" y="345" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#8A8A82">BHMS · Homeopathy Physician</text>
+          </svg>
+          <div class="about-info-card">
+            <div class="info-card-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <div class="info-card-label">Call for Appointment</div>
+              <a href="tel:05224066650" class="info-card-phone">0522 406 6650</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Treatments Section -->
+<section class="treatments-section section-padding">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-eyebrow">Our Specialities</span>
+      <h2 class="section-title">Treatments We Offer</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <a href="#" class="treatment-card">
+          <div class="treatment-icon"><i class="fas fa-female"></i></div>
+          <h4>Women's Health</h4>
+          <p>Comprehensive care for hormonal issues, PCOD, and women's wellness at every life stage.</p>
+          <span class="treatment-link">Read more <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <a href="#" class="treatment-card">
+          <div class="treatment-icon"><i class="fas fa-heartbeat"></i></div>
+          <h4>Thyroid</h4>
+          <p>Natural treatment for hyperthyroidism and hypothyroidism through proven homeopathic remedies.</p>
+          <span class="treatment-link">Read more <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <a href="#" class="treatment-card">
+          <div class="treatment-icon"><i class="fas fa-lungs"></i></div>
+          <h4>Sinusitis</h4>
+          <p>Effective relief for sinus inflammation caused by viruses, bacteria, fungi or allergic reactions.</p>
+          <span class="treatment-link">Read more <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <a href="#" class="treatment-card">
+          <div class="treatment-icon"><i class="fas fa-hand-sparkles"></i></div>
+          <h4>Skin</h4>
+          <p>Root-cause treatment for eczema, psoriasis, acne, and various chronic skin conditions.</p>
+          <span class="treatment-link">Read more <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <a href="#" class="treatment-card">
+          <div class="treatment-icon"><i class="fas fa-user-circle"></i></div>
+          <h4>Hair Loss</h4>
+          <p>Homeopathic solutions addressing the root causes of hair fall and promoting natural regrowth.</p>
+          <span class="treatment-link">Read more <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <a href="#" class="treatment-card">
+          <div class="treatment-icon"><i class="fas fa-brain"></i></div>
+          <h4>Migraine</h4>
+          <p>Gentle, lasting relief from chronic migraine and headache without dependency on painkillers.</p>
+          <span class="treatment-link">Read more <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <a href="#" class="treatment-card">
+          <div class="treatment-icon"><i class="fas fa-seedling"></i></div>
+          <h4>Allergy</h4>
+          <p>Natural desensitisation to allergens — dust, pollen, food — through constitutional homeopathy.</p>
+          <span class="treatment-link">Read more <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <a href="#" class="treatment-card">
+          <div class="treatment-icon"><i class="fas fa-walking"></i></div>
+          <h4>Back Pain</h4>
+          <p>Drug-free management of chronic back pain, sciatica, and spinal problems through homeopathy.</p>
+          <span class="treatment-link">Read more <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <a href="#" class="treatment-card">
+          <div class="treatment-icon"><i class="fas fa-child"></i></div>
+          <h4>Children Diseases</h4>
+          <p>Safe, gentle homeopathic care for children's recurring infections, growth issues, and behavioural concerns.</p>
+          <span class="treatment-link">Read more <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <a href="#" class="treatment-card">
+          <div class="treatment-icon"><i class="fas fa-chart-line"></i></div>
+          <h4>Height Increase</h4>
+          <p>Stimulating natural growth potential in children and adolescents through homeopathic treatment.</p>
+          <span class="treatment-link">Read more <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section section-padding">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-eyebrow">Patient Stories</span>
+      <h2 class="section-title">What Patients Say About Us</h2>
+    </div>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"Dr. Abhishek Jain uses a holistic approach to healing. I consulted him for various gastric problems. His accurate diagnosis and treatment worked wonders for me. He is a good listener and quite empathetic. He is undoubtedly the best homeopathic practitioner."</p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">A</div>
+                  <div><strong>Amrita</strong><span>Patient</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"I had developed a cyst on my lower back. After consulting Dr. Abhishek Jain, he recommended two different types of tablets. In only a couple of weeks, the size of the cyst reduced drastically. Would definitely recommend for all medical needs."</p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">D</div>
+                  <div><strong>Divyam Sood</strong><span>Patient</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"My wife was suffering from PCOD. Someone recommended Dr. Abhishek Jain and my wife started taking meds. He does miracles with his medicines, which no allopathic doctor can do. Thank you Dr. Abhishek Jain."</p>
+                <div class="testimonial-author">
+                  <div class="author-avatar">R</div>
+                  <div><strong>Raj Malhotra</strong><span>Patient</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-controls text-center mt-4">
+        <button class="btn testimonial-btn me-2" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="btn testimonial-btn" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-lg-7">
+        <h2>Ready for Natural, Lasting Relief?</h2>
+        <p>Book an online or in-clinic consultation with Dr. Abhishek Jain today.</p>
+      </div>
+      <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+        <a href="#" class="btn btn-primary btn-lg me-3">Book Appointment</a>
+        <a href="tel:05224066650" class="btn btn-outline-light btn-lg">Call Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <h5 class="footer-heading">About</h5>
+        <p>Dr. Abhishek Jain has done extensive research in the field of homeopathy and developed a unique system of homeopathic medicine for individual patients.</p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h5 class="footer-heading">Useful Links</h5>
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Book an Appointment</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <h5 class="footer-heading">Contact Us</h5>
+        <ul class="footer-contact">
+          <li><i class="fas fa-map-marker-alt"></i> Swaroop Arcade Kapoorthala, U.G.F 11 &amp; 12, opp. Archies Gallery, Lucknow, UP 226024</li>
+          <li><i class="fas fa-phone-alt"></i><a href="tel:05224066650">0522 406 6650</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container text-center">
+      <p>Copyright &copy; 2025. All rights reserved. Made with ❤ by <a href="https://www.digitalnawab.com/" target="_blank">Digital Nawab</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script>
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+  document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
+</script>
+<script src="main.js"></script>  <!-- add this -->
+</body>
+</html>
